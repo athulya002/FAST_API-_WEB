@@ -11,11 +11,11 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
-# Simulated database
+# Simulated db
 comments_db: Dict[int, Dict] = {}
 comment_id_counter = 1
 
-# Comment data model
+# model
 class Comment(BaseModel):
     username: str
     email: EmailStr
@@ -35,3 +35,4 @@ async def add_comment(comment: Comment):
 @app.get("/all_comments/")
 async def all_comments():
     return comments_db
+
