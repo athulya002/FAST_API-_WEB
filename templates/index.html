@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI Page</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+   
+    <form action="http://127.0.0.1:8000/add_comment/" method="post" id="commentForm">
+
+        <h2>Welcome to FastAPI</h2>
+        <h2>Leave a Comment</h2>
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter Email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Comments</label>
+            <textarea id="comments" placeholder="Enter your comments" rows="4" required></textarea>
+        </div>
+
+        <div class="button-group">
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <script src="/static/script.js"></script>
+</body>
+</html>
